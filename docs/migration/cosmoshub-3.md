@@ -1,3 +1,7 @@
+---
+title: Cosmos Hub 3 Upgrade
+order: 5
+---
 <!-- markdown-link-check-disable -->
 # Cosmos Hub 3 Upgrade Instructions
 
@@ -54,11 +58,11 @@ If you’re running a block explorer, wallet, exchange, validator, or any other 
 1. [Chain Upgrade Guide to v0.40](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
 1. [REST Endpoints Migration](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/rest.md)
 1. [Collection of breaking changes from changelogs](breaking_changes.md)
-1. [Inter-Blockchain Communication (IBC)– cross-chain transactions](https://figment.network/resources/cosmos-stargate-upgrade-overview/#ibc)
-1. [Protobuf Migration – blockchain performance & dev acceleration](https://figment.network/resources/cosmos-stargate-upgrade-overview/#proto)
-1. [State Sync – minutes to sync new nodes](https://figment.network/resources/cosmos-stargate-upgrade-overview/#sync)
-1. [Full-Featured Light Clients](https://figment.network/resources/cosmos-stargate-upgrade-overview/#light)
-1. [Chain Upgrade Module – upgrade automation](https://figment.network/resources/cosmos-stargate-upgrade-overview/#upgrade)
+1. [Inter-Blockchain Communication (IBC)– cross-chain transactions](https://figment.io/resources/cosmos-stargate-upgrade-overview/#ibc)
+1. [Protobuf Migration – blockchain performance & dev acceleration](https://figment.io/resources/cosmos-stargate-upgrade-overview/#proto)
+1. [State Sync – minutes to sync new nodes](https://figment.io/resources/cosmos-stargate-upgrade-overview/#sync)
+1. [Full-Featured Light Clients](https://figment.io/resources/cosmos-stargate-upgrade-overview/#light)
+1. [Chain Upgrade Module – upgrade automation](https://figment.io/resources/cosmos-stargate-upgrade-overview/#upgrade)
 
 If you want to test the procedure before the update happens on 18th of February, please see this post accordingly:
 
@@ -71,7 +75,7 @@ major upgrade (`cosmoshub-3`). These changes notably consist of many new feature
 protocol changes, and application structural changes that favor developer ergonomics
 and application development.
 
-First and foremost, [IBC](https://docs.cosmos.network/master/ibc/overview.html) following 
+First and foremost, [IBC](https://docs.cosmos.network/main/ibc/overview.html) following 
 the [Interchain Standads](https://github.com/cosmos/ics#ibc-quick-references) will be enabled. 
 This upgrade comes with several improvements in efficiency, node synchronization and following blockchain upgrades.
 More details on the [Stargate Website](https://stargate.cosmos.network/).

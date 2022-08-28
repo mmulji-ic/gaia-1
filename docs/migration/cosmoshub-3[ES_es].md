@@ -1,3 +1,6 @@
+---
+order: false
+---
 <!-- markdown-link-check-disable -->
 # Instrucciones de actualización del Cosmos Hub 3
 
@@ -24,10 +27,10 @@ Si tienes un explorador de bloques, un monedero, un exchange, un validador o cua
 1. [Migración de endpoints REST](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/rest.md)
 1. [Recopilación de modificaciones de ruptura de los registros de cambios](https://github.com/cosmos/gaia/blob/main/docs/migration/breaking_changes.md)
 1. [Comunicación entre cadenas de bloques (IBC) - transacciones entre cadenas](https://figment.io/resources/cosmos-stargate-upgrade-overview/#ibc)
-1. [Migración de Protobuf - rendimiento de la cadena de bloques y aceleración del desarrollo](https://figment.network/resources/cosmos-stargate-upgrade-overview/#proto)
-1. [Sincronización de estados - minutos para sincronizar nuevos nodos](https://figment.network/resources/cosmos-stargate-upgrade-overview/#sync)
-1. [Clientes ligeros con todas las funciones](https://figment.network/resources/cosmos-stargate-upgrade-overview/#light)
-1. [Módulo de actualización de la cadena - automatización de la actualización](https://figment.network/resources/cosmos-stargate-upgrade-overview/#upgrade)
+1. [Migración de Protobuf - rendimiento de la cadena de bloques y aceleración del desarrollo](https://figment.io/resources/cosmos-stargate-upgrade-overview/#proto)
+1. [Sincronización de estados - minutos para sincronizar nuevos nodos](https://figment.io/resources/cosmos-stargate-upgrade-overview/#sync)
+1. [Clientes ligeros con todas las funciones](https://figment.io/resources/cosmos-stargate-upgrade-overview/#light)
+1. [Módulo de actualización de la cadena - automatización de la actualización](https://figment.io/resources/cosmos-stargate-upgrade-overview/#upgrade)
 
 Si quieres probar el procedimiento antes de que se produzca la actualización el 18 de febrero, consulta este [post](https://github.com/cosmos/gaia/issues/569#issuecomment-767910963) en relación a ello.
 
@@ -35,7 +38,7 @@ Si quieres probar el procedimiento antes de que se produzca la actualización el
 
 Se han producido muchos cambios en el SDK de Cosmos y en la aplicación Gaia desde la última gran actualización (`cosmoshub-3`). Estos cambios consisten principalmente en muchas nuevas características, cambios de protocolo y cambios estructurales de la aplicación que favorecen la ergonomía del desarrollador y el desarrollo de la aplicación.
 
-En primer lugar, se habilitará [IBC](https://docs.cosmos.network/master/ibc/overview.html) siguiendo los [estándares de Interchain](https://github.com/cosmos/ics#ibc-quick-references). Esta actualización viene con varias mejoras en la eficiencia, la sincronización de nodos y las siguientes actualizaciones de la cadena de bloques. Más detalles en el [sitio web de Stargate](https://stargate.cosmos.network/).
+En primer lugar, se habilitará [IBC](https://docs.cosmos.network/main/ibc/overview.html) siguiendo los [estándares de Interchain](https://github.com/cosmos/ics#ibc-quick-references). Esta actualización viene con varias mejoras en la eficiencia, la sincronización de nodos y las siguientes actualizaciones de la cadena de bloques. Más detalles en el [sitio web de Stargate](https://stargate.cosmos.network/).
 
 __La aplicación [Gaia](https://github.com/cosmos/gaia) v4.0.0 es lo que los operadores de nodos actualizarán y ejecutarán en esta próxima gran actualización__. Tras la versión v0.41.0 del SDK de Cosmos y la v0.34.3 de Tendermint.
 

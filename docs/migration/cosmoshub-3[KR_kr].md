@@ -1,3 +1,6 @@
+---
+order: false
+---
 <!-- markdown-link-check-disable -->
 # 코스모스 허브 3 업그레이드 매뉴얼
 
@@ -25,11 +28,11 @@
 1. [코스모스 v0.40 체인 업그레이드 가이드](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/chain-upgrade-guide-040.md)
 1. [REST 엔드포인트 마이그레이션](https://github.com/cosmos/cosmos-sdk/blob/master/docs/migrations/rest.md)
 1. [각 버전 체인지로그의 breaking change 모음](breaking_changes.md)
-1. [Inter-Blockchain Communication (IBC)– 체인간 트랜잭션](https://figment.network/resources/cosmos-stargate-upgrade-overview/#ibc)
-1. [Protobuf 마이그레이션 – 블록체인 성능 및 개발 과정 개선](https://figment.network/resources/cosmos-stargate-upgrade-overview/#proto)
-1. [State Sync – 몇 분 내에 완료되는 노드 동기화](https://figment.network/resources/cosmos-stargate-upgrade-overview/#sync)
-1. [강력한 기능을 포함한 라이트 클라이언트](https://figment.network/resources/cosmos-stargate-upgrade-overview/#light)
-1. [체인 업그레이드 모듈 – 업그레이드 자동화](https://figment.network/resources/cosmos-stargate-upgrade-overview/#upgrade)
+1. [Inter-Blockchain Communication (IBC)– 체인간 트랜잭션](https://figment.io/resources/cosmos-stargate-upgrade-overview/#ibc)
+1. [Protobuf 마이그레이션 – 블록체인 성능 및 개발 과정 개선](https://figment.io/resources/cosmos-stargate-upgrade-overview/#proto)
+1. [State Sync – 몇 분 내에 완료되는 노드 동기화](https://figment.io/resources/cosmos-stargate-upgrade-overview/#sync)
+1. [강력한 기능을 포함한 라이트 클라이언트](https://figment.io/resources/cosmos-stargate-upgrade-overview/#light)
+1. [체인 업그레이드 모듈 – 업그레이드 자동화](https://figment.io/resources/cosmos-stargate-upgrade-overview/#upgrade)
 
 만약 2월 18일 전에 업그레이드 과정을 미리 테스트 진행을 희망하시는 경우 [이 글](https://github.com/cosmos/gaia/issues/569#issuecomment-767910963)을 참고하세요
 
@@ -38,7 +41,7 @@
 지난 코스모스 허브 업그레이드(`cosmoshub-3`) 이후 코스모스 SDK와 Gaia 애플리케이션에 상당한 양의 변경사항이 적용되었습니다.
 변경사항에는 신규 기능, 프로토콜 변경사항, 애플리케이션 구조 변경 등이 포함되었으며, 애플리케이션 개발 과정의 개선이 기대됩니다.
 
-우선, [인터체인 표준](https://github.com/cosmos/ics#ibc-quick-references)를 따른 [IBC](https://docs.cosmos.network/master/ibc/overview.html)이 활성화될 예정입니다. 또한 효율성, 노드 동기화, 추후 블록체인 업데이트 과정이 개선됩니다. 자세한 내용은 [스타게이트 웹사이트](https://stargate.cosmos.network/)를 참고하세요.
+우선, [인터체인 표준](https://github.com/cosmos/ics#ibc-quick-references)를 따른 [IBC](https://docs.cosmos.network/main/ibc/overview.html)이 활성화될 예정입니다. 또한 효율성, 노드 동기화, 추후 블록체인 업데이트 과정이 개선됩니다. 자세한 내용은 [스타게이트 웹사이트](https://stargate.cosmos.network/)를 참고하세요.
 
 __이번 업그레이드에서 풀 노드 운영자 업그레이드를 진행하는 것은 [Gaia](https://github.com/cosmos/gaia) 애플리케이션 v4.0.0입니다. 이번 버전의 Gaia 애플리케이션은 코스모스 SDK v0.41.0 그리고 텐더민트 v0.34.3 기반으로 빌드되었습니다.
 

@@ -1,6 +1,7 @@
-<!--
-order: 3
--->
+---
+order: 2
+title: Joining Mainnet
+---
 
 # Join the Cosmos Hub Mainnet
 
@@ -10,7 +11,7 @@ The current Cosmos Hub mainnet, `cosmoshub-4`, has been performing in place stor
 
 
 <!-- TODO: Link Future Quick Start Guide -->
-For instructions to boostrap a node via Quicksync or State Sync, see the [Quickstart Guide](https://hub.cosmos.network/main/getting-started/quickstart.html)
+For instructions to boostrap a node via Quicksync or State Sync, see the [Quickstart Guide](https://github.com/cosmos/mainnet/blob/306363b874e5dea91d3305788f2d864713aa10e0/README.md)
 
 For instructions to join as a validator, please also see the [Validator Guide](https://hub.cosmos.network/main/validators/overview.html#).
 
@@ -31,8 +32,8 @@ For instructions to join as a validator, please also see the [Validator Guide](h
     - [Blocksync](#blocksync)
     - [State Sync](#state-sync)
     - [Quicksync](#quicksync)
-- [Snapshots](#snapshots)
-- [Releases](#releases-upgrades)
+- [Snapshots](#snapshots)=
+- [Releases](#releases-amp-upgrades)
 - [Cosmovisor](#cosmovisor)
 - [Running via Background Process](#running-via-background-process)
 - [Exporting State](#exporting-state)
@@ -50,6 +51,7 @@ There are many explorers for the Cosmos Hub. For reference while setting up a no
 - [Mintscan](https://www.mintscan.io/cosmos)
 - [Big Dipper](https://cosmos.bigdipper.live/)
 - [Hubble](https://hubble.figment.io/cosmos/chains/cosmoshub-4)
+<!-- markdown-link-check-disable-next-line -->
 - [Stake ID](https://cosmos.stake.id/)
 
 
@@ -253,7 +255,7 @@ Make sure to consult the [hardware](#Hardware) section for guidance on the best 
 :::::: tab Blocksync
 ### Blocksync
 
-Blocksync is faster than traditional consensus and syncs the chain from genesis by downloading blocks and verifying against the merkle tree of validators. For more information see [Tendermint's Blocksync Docs](https://docs.tendermint.com/master/tendermint-core/block-sync/)
+Blocksync is faster than traditional consensus and syncs the chain from genesis by downloading blocks and verifying against the merkle tree of validators. For more information see [Tendermint's Fastsync Docs](https://docs.tendermint.com/v0.34/tendermint-core/fast-sync.html)
 
 When syncing via Blocksync, node operators will either need to manually upgrade the chain or set up [Cosmovisor](#Cosmovisor) to upgrade automatically.
 
@@ -261,22 +263,12 @@ For more information on performing the manual upgrades, see [Releases & Upgrades
 
 It is possible to sync from previous versions of the Cosmos Hub. See the matrix below for the correct `gaia` version. See the [mainnet archive](https://github.com/cosmos/mainnet) for historical genesis files.
 
-
-| Upgrade Name        | Date          | Height    | Chain Identifier | Tm      | Cosmos SDK | Gaia                     | IBC                      |
-|---------------------|---------------|-----------|---------------|------------|------------|--------------------------|--------------------------|
-| Mainnet Launch      | 13/03/19    | 0         | `cosmoshub-1` | [v0.31.x](https://github.com/tendermint/tendermint/releases/tag/v0.31.11)          | [v0.33.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.33.2)    |  _Included in Cosmos SDK_ | n/a                      |
-| [Security Hard Fork](https://forum.cosmos.network/t/critical-cosmossdk-security-advisory-updated/2211)  | 21/04/19    | 482,100   | `cosmoshub-1` | [v0.31.x](https://github.com/tendermint/tendermint/releases/tag/v0.31.11)          | [v0.34.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.34.6)    |   _Included in Cosmos SDK_)                  | n/a                      |
-| Upgrade #1          | 21/01/20    | 500,043   | `cosmoshub-2` | [v0.31.x](https://github.com/tendermint/tendermint/releases/tag/v0.31.11)          | [v0.34.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.34.10)    |   _Included in Cosmos SDK_)                  | n/a                      |
-| Upgrade #2          | 07/08/20    | 2,902,000 | `cosmoshub-3` | [v0.32.x](https://github.com/tendermint/tendermint/releases/tag/v0.32.14)          | [v0.37.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.37.15)    | [v2.0.x](https://github.com/cosmos/gaia/releases/tag/v2.0.14)                   | n/a                      |
-| Stargate            | 18/02/21    | 5,200,791 | `cosmoshub-4` | [v0.34.x](https://github.com/tendermint/tendermint/releases/tag/v0.34.3)          | [v0.40.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.40.1)    | [v4.0.x](https://github.com/cosmos/gaia/releases/tag/v4.0.6)                   | _Included in Cosmos SDK_ |
-| Security Hard Fork  | ?             | ?         | `cosmoshub-4` | [v0.34.x](https://github.com/tendermint/tendermint/releases/tag/v0.34.8)          | [v0.41.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.41.4)    | [v4.2.x](https://github.com/cosmos/gaia/releases/tag/v4.2.1)                   | _Included in Cosmos SDK_ |
-| Delta (Gravity DEX) | 13/07/21    | 6,910,000 | `cosmoshub-4` | [v0.34.x](https://github.com/tendermint/tendermint/releases/tag/v0.34.13)          | [v0.42.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.42.10)    | [v5.0.x](https://github.com/cosmos/gaia/releases/tag/v5.0.8)                   | _Included in Cosmos SDK_ |
-| Vega                | 13/12/21    | 8,695,000 | `cosmoshub-4` | [v0.34.x](https://github.com/tendermint/tendermint/releases/tag/v0.34.14)          | [v0.44.x](https://github.com/cosmos/cosmos-sdk/releases/tag/v0.44.5)    | [v6.0.x](https://github.com/cosmos/gaia/releases/tag/v6.0.0)                   | [v2.0.x](https://github.com/cosmos/ibc-go/releases/tag/v2.0.3)                   |
-
-
-
-
-
+| Chain Id      | Gaia Version  |
+| -----------   | -------- |
+| `cosmoshub-4` | `v4.2.1` |
+| `cosmoshub-3` | `v2.0.x` |
+| `cosmoshub-2` | `v1.0.x` |
+| `cosmoshub-1` | `v0.0.x` |
 
 ##### Getting Started
 
@@ -292,13 +284,13 @@ The node will begin rebuilding state until it hits the first upgrade height at b
 :::::: tab "State Sync"
 ### State Sync
 
-State Sync is an efficient and fast way to bootstrap a new node, and it works by replaying larger chunks of application state directly rather than replaying individual blocks or consensus rounds. For more information, see [Tendermint's State Sync docs](https://docs.tendermint.com/master/spec/p2p/messages/state-sync.html).
+State Sync is an efficient and fast way to bootstrap a new node, and it works by replaying larger chunks of application state directly rather than replaying individual blocks or consensus rounds. For more information, see [Tendermint's State Sync docs](https://github.com/tendermint/tendermint/blob/v0.34.x/spec/p2p/messages/state-sync.md).
 
 To enable state sync, visit an explorer to get a recent block height and corresponding hash. A node operator can choose any height/hash in the current bonding period, but as the recommended snapshot period is `1000` blocks, it is advised to choose something close to `current height - 1000`.
 
 With the block height and hash selected, update the configuration in `~/.gaia/config/config.toml` to set `enable = true`, and populate the `trust_height` and `trust_hash`. Node operators can configure the rpc servers to a preferred provider, but there must be at least two entries. It is important that these are two rpc servers the node operator trusts to verify component parts of the chain state. While not recommended, uniqueness is not currently enforced, so it is possible to duplicate the same server in the list and still sync successfully.
 
-> **Note**: In the future, the RPC server requirement will be deprecated as state sync is [moved to the p2p layer in Tendermint 0.35](https://github.com/tendermint/tendermint/issues/6491).
+> **Note**: In the future, the RPC server requirement will be deprecated as state sync is [moved to the p2p layer in Tendermint 0.38](https://github.com/tendermint/tendermint/issues/6491).
 
 ```
 #######################################################
@@ -318,7 +310,7 @@ enable = true
 #
 # For Cosmos SDK-based chains, trust_period should usually be about 2/3 of the unbonding time (~2
 # weeks) during which they can be financially punished (slashed) for misbehavior.
-rpc_servers = "https://rpc.cosmos.network:443,https://rpc.cosmos.network:443"
+rpc_servers = "https://rpc-cosmoshub.keplr.app:443,https://rpc.cosmos.network:443"
 trust_height = 8959784
 trust_hash = "3D8F12EA302AEDA66E80939F7FC785206692F8B6EE6F727F1655F1AFB6A873A5"
 trust_period = "168h0m0s"
