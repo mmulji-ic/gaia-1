@@ -10,7 +10,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: cosmos-x/hermes-e2e
+  IMAGE_NAME: mmedia-csx/hermes-e2e
 
 jobs:
   build-and-push-image:
