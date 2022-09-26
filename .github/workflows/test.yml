@@ -80,7 +80,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
->>>>>>> 91c7efd937730116aea40d298cc4864e9bf28715
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
         with:
