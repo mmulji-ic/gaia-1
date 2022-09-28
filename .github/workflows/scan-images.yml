@@ -15,7 +15,7 @@ jobs:
         uses: dhet/scan-docker-tags-action@v1.0.1
         with:
           image: informalsystems/hermes
-          max-age-minutes: 15
+          max-age-minutes: 58000
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         id: scan
