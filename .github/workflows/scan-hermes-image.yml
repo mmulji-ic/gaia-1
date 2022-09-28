@@ -1,0 +1,23 @@
+name: Scan Docker Repo
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  scan:
+    name: List Recent Updates
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Scan Docker Repository
+        uses: dhet/scan-docker-tags-action@v1.0.1
+        with:
+          image: informalsystems/hermes
+          max-age-minutes: 15
+          username: ${{ secrets.DOCKER_HUB_USER }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+        id: scan
+      - name: Print
+        run: "echo 'Recent updates: ${{ steps.scan.outputs.tags }}'"
