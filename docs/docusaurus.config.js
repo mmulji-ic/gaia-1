@@ -14,7 +14,7 @@ const algoliaIndexName = 'cosmos_network';
 const config = {
   title: 'Cosmos Hub',
   tagline: '',
-  favicon: 'img/hub.svg',
+  favicon: '/gaia/img/hub.svg',
 
   // Set the production url of your site here
   url: 'https://hub.cosmos.network',
@@ -123,40 +123,21 @@ const config = {
             ],
           },
           {
-            type: 'dropdown',
-            label: '🌐',
-            position: 'right',
-            items: [
-              {
-                href: '/translations/es',
-                html: 'Español',
-              },
-              {
-                href: '/translations/ko',
-                html: '한국인',
-              },
-              {
-                href: '/translations/zh',
-                html: '中文',
-              },
-           ],
-          },
-          {
             type: 'docsVersionDropdown',
             position: 'left',
             dropdownActiveClassDisabled: true,
             // versions not yet migrated to docusaurus
             dropdownItemsAfter: [
-              {
-                href: 'https://hub.cosmos.network/v11/',
-                label: 'v11',
-                target: '_self',
-              },
-              {
-                href: 'https://hub.cosmos.network/v10/',
-                label: 'v10',
-                target: '_self',
-              },
+              // {
+              //   href: 'https://hub.cosmos.network/v11/',
+              //   label: 'v11',
+              //   target: '_self',
+              // },
+              // {
+              //   href: 'https://hub.cosmos.network/v10/',
+              //   label: 'v10',
+              //   target: '_self',
+              // },
             ],
           },
         ],
@@ -167,7 +148,7 @@ const config = {
           {
             items: [
               {
-                html: `<a href="https://cosmos.network"><img src="/img/logo-bw-inverse.svg" alt="Cosmos Logo"></a>`,
+                html: `<a href="https://cosmos.network"><img src="/gaia/img/logo-bw-inverse.svg" alt="Cosmos Logo"></a>`,
               },
             ],
           },
